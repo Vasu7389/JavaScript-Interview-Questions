@@ -59,3 +59,32 @@ So the object `a` looks like -
 ```
 
 </details>
+
+<details>
+<summary>
+    <h3>2. Guess the output of this code?
+
+```js
+let obj1 = { key: "value" };
+let obj2 = obj1;
+let obj3 = obj2;
+
+obj1.key = "new value";
+obj2 = { key: "another value" };
+
+console.log(obj1.key, obj2.key, obj3.key);
+```
+
+</h3>
+</summary>
+The output of this code will be `new value` `another value` `new value`.
+
+In this code, we are declaring three variables obj1, obj2, and obj3, and assigning an object to each of them. Then, we are reassigning a new object to obj2 and modifying a property of obj1.
+
+When the console.log statement is executed, it logs the values of the key property for each object. The value of the key property for obj1 is "new value", the value of the key property for obj2 is "another value", and the value of the key property for obj3 is "new value".
+
+This is because when an object is assigned to a variable, the variable stores a reference to the object in memory rather than the object itself. Changing the value of a property of the object using one variable will affect the value of that property when accessed using a different variable that references the same object. However, reassigning a new object to a variable will change the reference stored in that variable, so the original object is no longer accessible using that variable.
+
+In this case, the value of the key property for obj1 was changed to "new value" using the obj1 variable, which affected the value of the key property when accessed using the obj3 variable, because both variables reference the same object. However, the value of the key property for obj2 was not affected, because the obj2 variable was reassigned to reference a new object.
+
+</details>
