@@ -4,7 +4,7 @@ description: "Prepare for your next 2023 JavaScript interview with these tricky 
 githubPath: "https://github.com/Vasu7389/JavaScript-Interview-Questions-2023"
 ---
 
-<span style=" font-size: 0.8rem; border-bottom: 1px solid grey;"> Updated Dec 31, 2022 </span>
+<span style=" font-size: 0.8rem; border-bottom: 1px solid grey;"> Updated Jan 04, 2023 </span>
 
 In this article, we will cover a range of JavaScript interview questions, including those related to the latest versions of the language (ES6, ES7, ES8, and ES9).
 
@@ -88,3 +88,115 @@ This is because when an object is assigned to a variable, the variable stores a 
 In this case, the value of the key property for obj1 was changed to "new value" using the obj1 variable, which affected the value of the key property when accessed using the obj3 variable, because both variables reference the same object. However, the value of the key property for obj2 was not affected, because the obj2 variable was reassigned to reference a new object.
 
 </details>
+
+<details>
+<summary>
+    <h3>3. Guess the output of this JavaScript code?
+
+```js
+const obj = {
+  a: "foo",
+  b: function () {
+    console.log(this.a);
+  },
+};
+
+const c = obj.b;
+
+obj.b();
+c();
+```
+
+</h3>
+</summary>
+
+Answer - foo, undefined
+
+When the method obj.b is called directly on obj, the output will be "foo". This is because this refers to the object that the method is called on, and obj.a is equal to "foo".
+
+When the variable c is assigned the value of obj.b, it is a reference to the function itself and not the object obj. When c is called, it is not called on an object, so this will not refer to obj and the value of this.a is undefined. As a result, the output when calling c() will be undefined.
+
+</details>
+
+<details>
+<summary>
+    <h3>4. Guess the output of this code?
+
+```js
+const x = { foo: 1 };
+const y = { foo: 2 };
+
+function addFoo(obj) {
+  return obj.foo + 1;
+}
+
+console.log(addFoo(x));
+console.log(addFoo(y));
+```
+
+</h3>
+</summary>
+Answer - 2, 3
+
+The addFoo function takes an object as an argument and returns the value of obj.foo + 1. When addFoo is called with x as the argument, the output will be 2, because x.foo is equal to 1. When addFoo is called with y as the argument, the output will be 3, because y.foo is equal to 2.
+
+</details>
+<details>
+<summary>
+    <h3>5. Guess the output of below JavaScript code?
+
+```js
+const arr = [1, 2, 3, 4, 5];
+
+for (var i = 0; i < arr.length; i++) {
+  setTimeout(function () {
+    console.log(i);
+  }, 1000);
+}
+```
+
+</h3>
+</summary>
+Answer - 5, 5, 5, 5, 5
+
+The setTimeout function is called inside of a loop that iterates through the elements in the arr array. The setTimeout function will execute its callback function after a delay of 1000 milliseconds. However, by the time the delay has elapsed and the callback function is called, the loop will have already completed and the value of i will be 5. As a result, the output will be 5 printed five times.
+
+</details>
+<details>
+<summary>
+    <h3>6. Guess the output of this JavaScript code?
+
+```js
+const arr = [1, 2, 3, 4, 5];
+
+arr.forEach(function (element) {
+  console.log(element);
+});
+```
+
+</h3>
+</summary>
+Answer - 1, 2, 3, 4, 5
+
+The forEach method is called on the arr array and a callback function is passed as an argument. The callback function will be executed for each element in the array, with the element passed as an argument to the callback. As a result, the output will be the elements of the array, 1, 2, 3, 4, and 5, printed on separate lines.
+
+</details>
+<details>
+<summary>
+    <h3>7. Guess the output of this code?
+
+```js
+let x = 1;
+
+if (function f() {}) {
+  x += typeof f;
+}
+
+console.log(x);
+```
+
+</h3>
+</summary>
+Answer - 1undefined
+
+The if statement is evaluating the function f as a boolean value. In JavaScript, functions are truthy values, so the condition will evaluate to true and the code block inside the if statement will be executed. The value of x is then incremented by the string "function", which is the result of calling typeof f.
