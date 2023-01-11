@@ -4,7 +4,7 @@ description: "Prepare for your next 2023 JavaScript interview with these tricky 
 githubPath: "https://github.com/Vasu7389/JavaScript-Interview-Questions-2023"
 ---
 
-<span style=" font-size: 0.8rem; border-bottom: 1px solid grey;"> Updated Jan 04, 2023 </span>
+<span style=" font-size: 0.8rem; border-bottom: 1px solid grey;"> Updated Jan 11, 2023 </span>
 
 In this article, we will cover a range of JavaScript interview questions, including those related to the latest versions of the language (ES6, ES7, ES8, and ES9).
 
@@ -181,6 +181,7 @@ Answer - 1, 2, 3, 4, 5
 The forEach method is called on the arr array and a callback function is passed as an argument. The callback function will be executed for each element in the array, with the element passed as an argument to the callback. As a result, the output will be the elements of the array, 1, 2, 3, 4, and 5, printed on separate lines.
 
 </details>
+
 <details>
 <summary>
     <h3>7. Guess the output of this code?
@@ -200,3 +201,5 @@ console.log(x);
 Answer - 1undefined
 
 The if statement is evaluating the function f as a boolean value. In JavaScript, functions are truthy values, so the condition will evaluate to true and the code block inside the if statement will be executed. The value of x is then incremented by the string "function", which is the result of calling typeof f.
+
+</details>
