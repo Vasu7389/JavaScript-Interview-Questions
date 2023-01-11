@@ -203,3 +203,95 @@ Answer - 1undefined
 The if statement is evaluating the function f as a boolean value. In JavaScript, functions are truthy values, so the condition will evaluate to true and the code block inside the if statement will be executed. The value of x is then incremented by the string "function", which is the result of calling typeof f.
 
 </details>
+
+<details>
+<summary>
+    <h3>8. Guess the output of this code?
+
+```js
+let a = {
+  x: 1,
+  y: 2,
+};
+let b = a;
+a.x = 5;
+console.log(a);
+console.log(b);
+```
+
+</h3>
+</summary>
+
+Answer - {x:5, y:2} {x:5, y:2}
+
+JavaScript objects are passed by reference. So when we assigned a object to b. b also pointing to the same object in memory. When we change the value of a.x it also affects b.x
+
+</details>
+
+<details>
+<summary>
+    <h3>9. Guess the output of this code?
+
+```js
+let x = [1, 2, 3];
+let y = [1, 2, 3];
+let z = y;
+
+console.log(x == y);
+console.log(x === y);
+console.log(z == y);
+console.log(z == x);
+```
+
+</h3>
+</summary>
+Answer -
+
+false
+false
+true
+false
+
+When comparing two objects with the == operator, it compares their references, not their values. In this case, x and y are different objects with the same values. z is assigned the value of y, so they refer to the same object. As a result, the first comparison returns false, the second comparison also returns false and the third comparison returns true. and the last comparison also returns false.
+
+</details>
+
+<details>
+<summary>
+    <h3>10. Guess the output of the below JavaScript code?
+
+```js
+var x = 0;
+for (let i = 0; i < 5; i++) {
+  setTimeout(() => {
+    x++;
+    console.log(x);
+  }, 1000);
+}
+```
+
+</h3>
+</summary>
+
+Answer:
+
+1
+2
+3
+4
+5
+
+The for loop is iterating 5 times, and in each iteration, it is scheduling a function to be invoked after 1000 milliseconds (1 second) using setTimeout.
+This function increments the value of `x` and logs it.
+
+But all the 5 functions invoked after 1000 milliseconds.
+
+Since, javascript is single threaded and event loop queue all the functions in the event loop and execute them one by one.
+
+But inside each `setTimeout` callback execution, `x++` increments `x` value by 1.
+
+_It makes difference when position of `x++` code changes wrt the setTimout callback._
+
+So all the 5 `callbacks` logs the values in `incremental` way, which is `1 2 3 4 5`.
+
+</details>
