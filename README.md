@@ -4,7 +4,7 @@ description: "Prepare for your next 2023 JavaScript interview with these tricky 
 githubPath: "https://github.com/Vasu7389/JavaScript-Interview-Questions-2023"
 ---
 
-<span style=" font-size: 0.8rem; border-bottom: 1px solid grey;"> Updated Jan 11, 2023 </span>
+<span style=" font-size: 0.8rem; border-bottom: 1px solid grey;"> Updated Jan 19, 2023 </span>
 
 In this article, we will cover a range of JavaScript interview questions, including those related to the latest versions of the language (ES6, ES7, ES8, and ES9).
 
@@ -293,5 +293,100 @@ But inside each `setTimeout` callback execution, `x++` increments `x` value by 1
 _It makes difference when position of `x++` code changes wrt the setTimout callback._
 
 So all the 5 `callbacks` logs the values in `incremental` way, which is `1 2 3 4 5`.
+
+</details>
+
+<details>
+<summary>
+    <h3>11. Guess the output of this JavaScript code?
+
+```js
+let a = { x: 1 };
+let b = { x: 2 };
+let c = { x: 3 };
+let d = { x: 4 };
+let e = { x: 5 };
+let arr = [a, b, c, d, e];
+
+arr.forEach((obj) => (obj.x = obj.x * 2));
+
+console.log(a.x, b.x, c.x, d.x, e.x);
+```
+
+</h3>
+</summary>
+Answer:
+
+2 4 6 8 10
+
+The code is using the `forEach` method to iterate over an array of objects, and it is modifying the `x` property of each object by multiplying it by 2.
+
+It's updating the original objects with `x*2` values.
+
+So, the output of the code is 2 4 6 8 10.
+
+</details>
+
+<details>
+<summary>
+    <h3>12. Guess the output of the JavaScript code?
+
+```js
+let num = 0;
+
+function test() {
+  var num = 1;
+  return num;
+}
+
+console.log(test());
+console.log(num);
+```
+
+</h3>
+</summary>
+Answer:
+1
+0
+
+The code defines a global variable num with the value of 0 and then a function test which declares a local variable num with the value of 1 and returns it.
+
+When test() is called, it first declares a local variable num with the value of 1.
+
+Then the function return statement logs 1 on the console.
+
+After that, it logs the value of global variable num which is 0.
+
+Because the global and local variables have different scope and different memory allocation.
+
+</details>
+
+<details>
+<summary>
+    <h3>13. Guess the output of the below JavaScript code?
+
+```js
+let obj = { name: "John", age: 25 };
+let newObj = { ...obj, age: 30 };
+
+console.log(obj.age);
+console.log(newObj.age);
+```
+
+</h3>
+</summary>
+Answer:
+25
+30
+
+The code creates an object obj with properties name and age. Then it creates a new object newObj using the spread operator to copy the properties of obj and then it updates the age property to 30.
+
+The spread operator `...` creates a new object with properties copied from the original object.
+
+So, the first console.log statement logs the value of age property of obj which is `25`.
+
+And, the second console.log statement logs the value of age property of newObj which is `30`.
+
+It doesn't affect the original object `obj`.
 
 </details>
