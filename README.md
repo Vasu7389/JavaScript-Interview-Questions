@@ -4,7 +4,7 @@ description: "Prepare for your next 2023 JavaScript interview with these tricky 
 githubPath: "https://github.com/Vasu7389/JavaScript-Interview-Questions-2023"
 ---
 
-<span style=" font-size: 0.8rem; border-bottom: 1px solid grey;"> Updated Jan 19, 2023 </span>
+<span style=" font-size: 0.8rem; border-bottom: 1px solid grey;"> Updated Feb 10, 2023 </span>
 
 In this article, we will cover a range of JavaScript interview questions, including those related to the latest versions of the language (ES6, ES7, ES8, and ES9).
 
@@ -388,5 +388,106 @@ So, the first console.log statement logs the value of age property of obj which 
 And, the second console.log statement logs the value of age property of newObj which is `30`.
 
 It doesn't affect the original object `obj`.
+
+</details>
+
+<details>
+<summary>
+    <h3>14. Guess the output of the below JavaScript code?
+
+```js
+const add = (a = 1, b = 2) => a + b;
+console.log(add());
+console.log(add(5));
+console.log(add(undefined, 10));
+```
+
+</h3>
+</summary>
+
+Answer:
+
+```bash
+3
+7
+11
+```
+
+The code defines a function add which takes two parameters a and b and returns the sum of both. It uses default parameters to assign default values 1 to a and 2 to b if they are not provided.
+
+So, the first console.log statement logs the result of add() which is 1 + 2 = 3 as both the parameters are not provided and default values are used.
+
+The second console.log statement logs the result of add(5) which is 5 + 2 = 7 as only the first parameter is provided and the default value of b is used.
+
+The third console.log statement logs the result of add(undefined, 10) which is 1 + 10 = 11 as the first parameter is provided as undefined and it takes the default value 1 and the second parameter is provided as 10.
+
+</details>
+
+<details>
+<summary>
+    <h3>15. Guess the output of the below JavaScript code?
+
+```js
+const name = "John";
+const age = 25;
+
+const user = { name, age };
+console.log(user);
+```
+
+</h3>
+</summary>
+
+Answer:
+
+```js
+{ name: "John", age: 25 }
+```
+
+The code defines two variables name and age with values "John" and 25 respectively.
+
+Then, it uses `object literal` notation to create an object user with properties `name` and `age` and the values are assigned from the variables name and age respectively.
+
+So, the `console.log` statement logs the user object which is `{ name: "John", age: 25 }`.
+
+In `ES6+`, you can use object literal notation to create objects with properties using the same name as the variables with the values assigned to them.
+
+</details>
+
+<details>
+<summary>
+    <h3>16. Guess the output of the below JavaScript code?
+
+```js
+const arr = [1, 2, 3];
+const [a, b, c] = arr;
+
+console.log(a);
+console.log(b);
+console.log(c);
+```
+
+</h3>
+</summary>
+
+Answer:
+
+```bash
+1
+2
+3
+```
+
+The code defines an array arr with values [1, 2, 3].
+
+Then, it uses `destructuring assignment` to extract the values from the array `arr` and assign them to variables `a`, `b`, and `c` respectively.
+
+So, the first console.log statement logs the value of a which is `1`.
+
+The second console.log statement logs the value of b which is `2`.
+
+The third console.log statement logs the value of c which is `3`.
+
+In ES6+, you can use destructuring assignment to extract values from arrays and objects and assign them to variables in a concise way.
 
 </details>
