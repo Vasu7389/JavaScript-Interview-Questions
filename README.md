@@ -4,7 +4,7 @@ description: "Prepare for your next 2023 JavaScript interview with these tricky 
 githubPath: "https://github.com/Vasu7389/JavaScript-Interview-Questions-2023"
 ---
 
-<span style=" font-size: 0.8rem; border-bottom: 1px solid grey;"> Updated Feb 10, 2023 </span>
+<span style=" font-size: 0.8rem; border-bottom: 1px solid grey;"> Updated Feb 25, 2023 </span>
 
 In this article, we will cover a range of JavaScript interview questions, including those related to the latest versions of the language (ES6, ES7, ES8, and ES9).
 
@@ -489,5 +489,119 @@ The second console.log statement logs the value of b which is `2`.
 The third console.log statement logs the value of c which is `3`.
 
 In ES6+, you can use destructuring assignment to extract values from arrays and objects and assign them to variables in a concise way.
+
+</details>
+
+<details>
+<summary>
+    <h3>17. What is the output of the below JavaScript code and why?
+
+```js
+console.log(typeof null);
+console.log(typeof undefined);
+console.log(null === undefined);
+console.log(null == undefined);
+```
+
+</h3>
+</summary>
+Answer:
+
+```bash
+object
+undefined
+false
+true
+```
+
+`typeof null` returns object which is an error in JavaScript. This is a historical bug in the language that cannot be fixed without breaking existing code. So, to check for `null`, you should use `===` null instead of `typeof` operator.
+
+typeof undefined returns undefined.
+
+null === undefined is false because `null` and `undefined` are two distinct types in JavaScript.
+
+null == undefined is true because `==` is the loose equality operator in JavaScript, which performs type coercion before comparison. In this case, both null and undefined are coerced to undefined before comparison, and since they both have the same value, the comparison returns true. However, it is generally recommended to use `===` instead of `==` to avoid unexpected behavior due to type coercion.
+
+</details>
+
+<details>
+<summary>
+    <h3>18. Write a function in JavaScript that takes an array of numbers and returns the sum of all positive numbers in the array.
+</h3>
+</summary>
+Answer:
+
+```js
+function sumOfPositiveNumbers(numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > 0) {
+      sum += numbers[i];
+    }
+  }
+  return sum;
+}
+
+// Example usage:
+const arr = [1, -2, 3, 4, -5, 6];
+console.log(sumOfPositiveNumbers(arr)); // Output: 14
+```
+
+The `sumOfPositiveNumbers` function takes an array of numbers as its parameter and initializes a variable sum to `0`. It then loops through each element of the array and checks if the number is greater than 0. If the number is positive, it adds the number to the sum. Finally, it returns the sum of all positive numbers in the array.
+
+In the example usage, we pass an array `[1, -2, 3, 4, -5, 6]` to the sumOfPositiveNumbers function. The function returns the sum of all positive numbers in the array, which is `14`.
+
+</details>
+
+<details>
+<summary>
+    <h3>19. Write a function in JavaScript that takes a string as input and returns a new string with all the vowels removed.
+</h3>
+</summary>
+Answer:
+
+```js
+function removeVowels(str) {
+  const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+  let newStr = "";
+  for (let i = 0; i < str.length; i++) {
+    if (!vowels.includes(str[i])) {
+      newStr += str[i];
+    }
+  }
+  return newStr;
+}
+
+// Example usage:
+const str = "This is a test string with vowels";
+console.log(removeVowels(str)); // Output: Ths s  tst strng wth vwls
+```
+
+The `removeVowels` function takes a string as its parameter and initializes an array vowels containing all the vowels. It then loops through each character of the input string and checks if the character is not present in the vowels array. If the character is not a vowel, it adds the character to the `newStr` string. Finally, it returns the newStr string with all the vowels removed.
+
+In the example usage, we pass a string 'This is a test string with vowels' to the removeVowels function. The function returns a new string with all the vowels removed, which is 'Ths s tst strng wth vwls'.
+
+</details>
+
+<details>
+<summary>
+    <h3>20. Write a function in JavaScript that takes an array of strings as input and returns a new array with the strings sorted in alphabetical order.
+</h3>
+</summary>
+Answer:
+
+```js
+function sortStrings(arr) {
+  return arr.sort();
+}
+
+// Example usage:
+const strings = ["apple", "banana", "cherry", "date", "elderberry"];
+console.log(sortStrings(strings)); // Output: ['apple', 'banana', 'cherry', 'date', 'elderberry']
+```
+
+The `sortStrings` function takes an array of strings as its parameter and uses the `sort()` method to sort the array in alphabetical order. The sort() method sorts the elements of an array in place and returns the sorted array. By default, the sort() method sorts the array elements in ascending order based on the `Unicode` values of the characters. Therefore, for strings, it sorts them in alphabetical order.
+
+In the example usage, we pass an array of strings `['apple', 'banana', 'cherry', 'date', 'elderberry']` to the sortStrings function. The function returns a new array with the strings sorted in alphabetical order, which is `['apple', 'banana', 'cherry', 'date', 'elderberry']`.
 
 </details>
