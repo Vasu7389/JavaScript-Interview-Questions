@@ -4,7 +4,7 @@ description: "Prepare for your next 2023 JavaScript interview with these tricky 
 githubPath: "https://github.com/Vasu7389/JavaScript-Interview-Questions-2023"
 ---
 
-<span style=" font-size: 0.8rem; border-bottom: 1px solid grey;"> Updated Feb 25, 2023 </span>
+<span style=" font-size: 0.8rem; border-bottom: 1px solid grey;"> Updated Mar 11, 2023 </span>
 
 In this article, we will cover a range of JavaScript interview questions, including those related to the latest versions of the language (ES6, ES7, ES8, and ES9).
 
@@ -603,5 +603,291 @@ console.log(sortStrings(strings)); // Output: ['apple', 'banana', 'cherry', 'dat
 The `sortStrings` function takes an array of strings as its parameter and uses the `sort()` method to sort the array in alphabetical order. The sort() method sorts the elements of an array in place and returns the sorted array. By default, the sort() method sorts the array elements in ascending order based on the `Unicode` values of the characters. Therefore, for strings, it sorts them in alphabetical order.
 
 In the example usage, we pass an array of strings `['apple', 'banana', 'cherry', 'date', 'elderberry']` to the sortStrings function. The function returns a new array with the strings sorted in alphabetical order, which is `['apple', 'banana', 'cherry', 'date', 'elderberry']`.
+
+</details>
+
+<details>
+<summary>
+    <h3>21. Write a function in JavaScript that checks if a string is a palindrome.
+</h3>
+</summary>
+Answer:
+
+```js
+function isPalindrome(str) {
+  const reversedStr = str.split("").reverse().join("");
+  return str === reversedStr;
+}
+
+// Example usage:
+console.log(isPalindrome("racecar")); // Output: true
+console.log(isPalindrome("hello")); // Output: false
+```
+
+The `isPalindrome` function takes a string as its parameter and first reverses the string using the `split()`, `reverse()`, and `join()` methods. It then checks if the reversed string is equal to the original string and returns true if they are equal and false otherwise.
+
+In the example usage, we pass the strings `racecar` and `hello` to the isPalindrome function. The function returns true for the first string because it is a palindrome (i.e., the reversed string is equal to the original string), and false for the second string.
+
+</details>
+
+<details>
+<summary>
+    <h3>22. Write a function in JavaScript that finds the second highest number in an array of numbers.
+</h3>
+</summary>
+Answer:
+
+```js
+function findSecondHighest(arr) {
+  const sortedArr = arr.sort((a, b) => b - a);
+  return sortedArr[1];
+}
+
+// Example usage:
+const numbers = [10, 5, 20, 15, 8];
+console.log(findSecondHighest(numbers)); // Output: 15
+```
+
+The `findSecondHighest` function takes an array of numbers as its parameter and first sorts the array in descending order using the `sort()` method and a comparison function. It then returns the second element in the sorted array, which is the second highest number.
+
+In the example usage, we pass the array `[10, 5, 20, 15, 8]` to the findSecondHighest function. The function returns `15`, which is the second highest number in the array.
+
+</details>
+
+<details>
+<summary>
+    <h3>23. Write a function in JavaScript that removes duplicates from an array.
+</h3>
+</summary>
+Answer:
+
+```js
+function removeDuplicates(arr) {
+  return [...new Set(arr)];
+}
+
+// Example usage:
+const numbers = [1, 2, 3, 2, 1, 4, 5, 4];
+console.log(removeDuplicates(numbers)); // Output: [1, 2, 3, 4, 5]
+```
+
+The `removeDuplicates` function takes an array as its parameter and first creates a Set object from the array using the `Set()` constructor. A Set is a collection of unique values, so all duplicates are automatically removed. We then use the spread syntax `(...)` to convert the Set back to an array.
+
+In the example usage, we pass the array `[1, 2, 3, 2, 1, 4, 5, 4]` to the removeDuplicates function. The function returns a new array with duplicates removed, which is `[1, 2, 3, 4, 5]`.
+
+</details>
+
+<details>
+<summary>
+    <h3>24. Write a function in JavaScript that returns the sum of two numbers without using the + operator.</h3>
+</summary>
+Answer:
+
+```jsx
+function add(a, b) {
+  while (b !== 0) {
+    let carry = a & b;
+    a = a ^ b;
+    b = carry << 1;
+  }
+  return a;
+}
+
+// Example usage:
+console.log(add(5, 7)); // Output: 12
+```
+
+The add function takes two numbers a and b as its parameters and uses a bitwise approach to add them. It repeatedly performs a bitwise AND operation between a and b to get the carry bits and performs a bitwise XOR operation between a and b to get the sum bits. It then shifts the carry bits one position to the left and assigns the result to b. This process continues until b is equal to 0. The final value of a is the sum of the two numbers.
+
+In the example usage, we pass the numbers 5 and 7 to the add function. The function returns 12, which is the sum of the two numbers.
+
+</details>
+
+<details>
+<summary>
+    <h3>25. Write a function in JavaScript that checks if a given string is a valid IPv4 address.</h3>
+</summary>
+Answer:
+
+```jsx
+function isValidIPv4(str) {
+  const octets = str.split(".");
+  if (octets.length !== 4) return false;
+  for (let i = 0; i < octets.length; i++) {
+    const octet = octets[i];
+    if (isNaN(octet) || octet < 0 || octet > 255) return false;
+    if (octet.length > 1 && octet[0] === "0") return false;
+  }
+  return true;
+}
+
+// Example usage:
+console.log(isValidIPv4("192.168.0.1")); // Output: true
+console.log(isValidIPv4("256.0.0.0")); // Output: false
+```
+
+The `isValidIPv4` function takes a string as its parameter and checks if it is a valid `IPv4` address.
+
+An IPv4 address consists of four octets separated by periods, with each octet being a number between 0 and 255.
+
+The function first splits the string into an array of octets using the split() method.
+
+It then checks if the array has exactly four elements and if each element is a number between 0 and 255.
+
+It also checks if each octet does not start with a 0 unless it is a single-digit octet.
+
+If any of these conditions are not met, the function returns false. Otherwise, it returns true.
+
+In the example usage, we pass the strings '192.168.0.1' and '256.0.0.0' to the isValidIPv4 function. The function returns true for the first string because it is a valid IPv4 address and false for the second string because it is not a valid IPv4 address.
+
+</details>
+
+<details>
+<summary>
+    <h3>26. Write a function in JavaScript that converts a given string to title case.</h3>
+</summary>
+Answer:
+
+```jsx
+function toTitleCase(str) {
+  return str.replace(/\b\w+/g, function (word) {
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+  });
+}
+
+// Example usage:
+console.log(toTitleCase("the quick brown fox")); // Output: 'The Quick Brown Fox'
+```
+
+The `toTitleCase` function takes a string as its parameter and converts it to title case. Title case is a style of capitalization where the first letter of each word is capitalized, and the rest of the letters are in lowercase.
+
+The function uses a regular expression to match the first letter of each word in the string and then uses the `charAt()` and `slice()` methods to capitalize the first letter and convert the rest of the letters to lowercase. It returns the modified string.
+
+In the example usage, we pass the string 'the quick brown fox' to the toTitleCase function. The function returns 'The Quick Brown Fox', which is the string converted to title case.
+
+</details>
+
+<details>
+<summary>
+    <h3>27. Write a function in JavaScript that generates a random hexadecimal color code.</h3>
+</summary>
+Answer:
+
+```jsx
+function getRandomColor() {
+  const hexChars = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    color += hexChars[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+// Example usage:
+console.log(getRandomColor()); // Output: e.g. '#3D5A89'
+```
+
+The `getRandomColor` function generates a random hexadecimal color code. A hexadecimal color code is a six-digit code that represents a color by specifying the amount of red, green, and blue in it.
+
+Each digit of the code can be any of the sixteen hexadecimal characters (0 to 9 and A to F).
+
+The function generates a random color code by selecting six random hexadecimal characters from the hexChars string using the Math.random() function and concatenating them together with a # symbol.
+
+It then returns the generated color code.
+
+In the example usage, we call the getRandomColor function, which returns a randomly generated color code. The output can vary each time the function is called, but it should be a valid hexadecimal color code.
+
+</details>
+
+<details>
+<summary>
+    <h3>28. Guess the output of the following code:</h3>
+
+```jsx
+let x = 5;
+{
+  let x = 10;
+  console.log(x);
+}
+console.log(x);
+```
+
+</summary>
+
+The output of the code above is:
+
+Answer:
+
+```bash
+10
+5
+```
+
+This is because of the block scoping behavior of the let keyword in ES6.
+
+When we declare a variable with `let` inside a block (in this case, the block is defined by the curly braces), the variable is only accessible inside that block and its sub-blocks.
+
+In the code above, we define a variable `x` outside the block with the value of `5`. Then we define another variable x inside the block with the value of 10.
+
+The first `console.log()` statement inside the block will print 10, because x refers to the variable defined inside the block. The second console.log() statement outside the block will print 5, because it refers to the variable defined outside the block.
+
+</details>
+
+<details>
+<summary>
+    <h3>29. Guess the output of the following code:</h3>
+
+```jsx
+const obj = { a: 1, b: 2, c: 3 };
+const { a, b } = obj;
+console.log(a, b);
+```
+
+</summary>
+
+The output of the code above is:
+
+Answer:
+
+```bash
+1 2
+```
+
+This is because of the object destructuring syntax introduced in ES6.
+
+We declare a constant variable obj with an object containing three properties. Then we use object destructuring to extract the properties a and b from the object and assign them to separate variables with the same names.
+
+The console.log() statement then prints the values of the a and b variables, which are 1 and 2 respectively.
+
+</details>
+
+<details>
+<summary>
+    <h3>30. Guess the output of the following code:</h3>
+
+```jsx
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const arr3 = [...arr1, ...arr2];
+console.log(arr3);
+```
+
+</summary>
+
+The output of the code above is:
+
+Answer:
+
+```bash
+[1, 2, 3, 4, 5, 6]
+```
+
+This is because of the spread syntax `(...)` introduced in ES6.
+
+The `...` operator can be used to spread the elements of an array or the properties of an object into a new array or object.
+
+In the code above, we define two arrays arr1 and arr2. Then we create a new array arr3 by spreading the elements of arr1 and arr2 into it using the spread syntax.
+
+The console.log() statement then prints the contents of arr3, which are the elements of arr1 followed by the elements of arr2.
 
 </details>
