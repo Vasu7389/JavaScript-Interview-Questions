@@ -4,7 +4,7 @@ description: "Prepare for your next 2023 JavaScript interview with these tricky 
 githubPath: "https://github.com/Vasu7389/JavaScript-Interview-Questions-2023"
 ---
 
-<span style=" font-size: 0.8rem; border-bottom: 1px solid grey;"> Updated Mar 11, 2023 </span>
+<span style=" font-size: 1rem; border-bottom: 1px solid grey;"> Updated Mar 26, 2023 </span>
 
 In this article, we will cover a range of JavaScript interview questions, including those related to the latest versions of the language (ES6, ES7, ES8, and ES9).
 
@@ -22,7 +22,7 @@ JavaScript is a programming language that is commonly used to create interactive
 
 ECMAScript and JavaScript are closely related, and the terms are often used interchangeably. However, ECMAScript is the formal specification, and JavaScript is the implementation of that specification.
 
-<span style=" font-size: 0.5rem;"> \*Discover the answers by clicking on the questions.</span>
+<span style=" font-size: 1rem;"> \*Discover the answers by clicking on the questions.</span>
 
 <details>
 <summary>
@@ -889,5 +889,108 @@ The `...` operator can be used to spread the elements of an array or the propert
 In the code above, we define two arrays arr1 and arr2. Then we create a new array arr3 by spreading the elements of arr1 and arr2 into it using the spread syntax.
 
 The console.log() statement then prints the contents of arr3, which are the elements of arr1 followed by the elements of arr2.
+
+</details>
+
+<details>
+<summary>
+    <h3>31. What is the output of the following code?</h3>
+
+```jsx
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1];
+
+arr2.push(4);
+
+console.log(arr1);
+console.log(arr2);
+```
+
+</summary>
+
+The output of the code will be:
+
+Answer:
+
+```bash
+[1, 2, 3]
+[1, 2, 3, 4]
+```
+
+The code creates an array arr1 with the values [1, 2, 3]. It then creates a new array arr2 using the spread syntax (...) to spread the values of arr1 into a new array.
+
+arr2.push(4) adds the value 4 to the end of arr2.
+
+However, arr1 remains unchanged because arr2 is a new array with its own reference to the values of arr1. This is known as creating a shallow copy of the array.
+
+Therefore, the first console.log(arr1) prints [1, 2, 3] and the second console.log(arr2) prints [1, 2, 3, 4].
+
+</details>
+
+<details>
+<summary>
+    <h3>32. What is the output of the following code?</h3>
+
+```jsx
+const x = 10;
+
+function foo() {
+  console.log(x);
+  const x = 20;
+}
+
+foo();
+```
+
+</summary>
+
+The output of the code will be:
+
+Answer:
+
+```bash
+ReferenceError: Cannot access 'x' before initialization
+```
+
+The foo function attempts to log the value of x before it is initialized. This causes a ReferenceError to be thrown, as x is not yet defined in the function scope.
+
+This happens because of variable hoisting in JavaScript. When a variable is declared with const or let, it is not hoisted to the top of the scope like variables declared with var are. Instead, they are only accessible after they are declared.
+
+Therefore, when console.log(x) is called in the foo function, the local variable x has not yet been initialized, resulting in a ReferenceError.
+
+</details>
+
+<details>
+<summary>
+    <h3>33. What is the output of the following code?</h3>
+
+```jsx
+const a = [1, 2, 3];
+const b = a;
+
+b.push(4);
+
+console.log(a);
+console.log(b);
+```
+
+</summary>
+
+The output of the code will be:
+
+Answer:
+
+```bash
+[1, 2, 3, 4]
+[1, 2, 3, 4]
+```
+
+The code creates an array a with the values [1, 2, 3]. It then creates a new variable b and assigns it to a, creating a reference to the same array.
+
+b.push(4) adds the value 4 to the end of the array.
+
+Since a and b reference the same array, both console.log(a) and console.log(b) will print [1, 2, 3, 4].
+
+This is different from the previous example where ... spread operator was used, which created a new array with the same values as the original array instead of referencing the same array.
 
 </details>
