@@ -1018,3 +1018,33 @@ Since a and b reference the same array, both console.log(a) and console.log(b) w
 This is different from the previous example where ... spread operator was used, which created a new array with the same values as the original array instead of referencing the same array.
 
 </details>
+
+<details>
+<summary>
+    <h3>34. What is the output of the following code?</h3>
+
+```jsx
+var companies = [
+  {id: "1", name:"Facebook"},
+  {id: "2", name:"Apple"},
+  {id: "3", name:"Google"},
+]
+
+companies.sort((a,b) => (a.name > b.name ? -1 : 1))
+console.log(companies)
+
+```
+
+</summary>
+
+The output of the code will be:
+
+Answer:
+
+```bash
+[ {id: "3", name:"Google"} , {id: "1", name:"Facebook"} , {id: "2", name:"Apple"} ]
+```
+
+The comparison function takes two parameters, "a" and "b", which represent two elements being compared in the array. If the "name" property of "a" comes before the "name" property of "b" in alphabetical order, then the function returns -1, which means "a" should come before "b" in the sorted array. Otherwise, if the "name" property of "a" comes after the "name" property of "b" in alphabetical order, then the function returns 1, which means "b" should come before "a" in the sorted array.
+
+</details>
