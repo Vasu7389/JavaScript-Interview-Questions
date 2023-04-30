@@ -4,7 +4,7 @@ description: "Prepare for your next 2023 JavaScript interview with these tricky 
 githubPath: "https://github.com/Vasu7389/JavaScript-Interview-Questions-2023"
 ---
 
-<span style=" font-size: 1rem; border-bottom: 1px solid grey;"> Updated Apr 16, 2023 </span>
+<span style=" font-size: 1rem; border-bottom: 1px solid grey;"> Updated Apr 30, 2023 </span>
 
 In this article, we will cover a range of JavaScript interview questions, including those related to the latest versions of the language (ES6, ES7, ES8, and ES9).
 
@@ -1024,14 +1024,14 @@ This is different from the previous example where ... spread operator was used, 
     <h3>34. What is the output of the following code?</h3>
 
 ```jsx
-var companies = [
+const companies = [
   {id: "1", name:"Facebook"},
   {id: "2", name:"Apple"},
   {id: "3", name:"Google"},
-]
+];
 
-companies.sort((a,b) => (a.name > b.name ? -1 : 1))
-console.log(companies)
+companies.sort((a,b) => (a.name > b.name ? -1 : 1));
+console.log(companies);
 
 ```
 
@@ -1042,9 +1042,15 @@ The output of the code will be:
 Answer:
 
 ```bash
-[ {id: "3", name:"Google"} , {id: "1", name:"Facebook"} , {id: "2", name:"Apple"} ]
+[ 
+    {id: "3", name:"Google"},
+    {id: "1", name:"Facebook"}, 
+    {id: "2", name:"Apple"} 
+]
 ```
 
-The comparison function takes two parameters, "a" and "b", which represent two elements being compared in the array. If the "name" property of "a" comes before the "name" property of "b" in alphabetical order, then the function returns -1, which means "a" should come before "b" in the sorted array. Otherwise, if the "name" property of "a" comes after the "name" property of "b" in alphabetical order, then the function returns 1, which means "b" should come before "a" in the sorted array.
+The comparison function takes two parameters, "a" and "b", which represent two elements being compared in the array. 
+If the "name" property of "a" comes before the "name" property of "b" in alphabetical order, then the function returns -1, which means "a" should come before "b" in the sorted array. 
+Otherwise, if the "name" property of "a" comes after the "name" property of "b" in alphabetical order, then the function returns 1, which means "b" should come before "a" in the sorted array.
 
 </details>
