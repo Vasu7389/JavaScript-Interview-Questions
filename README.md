@@ -4,7 +4,7 @@ description: "Prepare for your next 2023 JavaScript interview with these tricky 
 githubPath: "https://github.com/Vasu7389/JavaScript-Interview-Questions-2023"
 ---
 
-<span style=" font-size: 1rem; border-bottom: 1px solid grey;"> Updated Apr 16, 2023 </span>
+<span style=" font-size: 1rem; border-bottom: 1px solid grey;"> Updated May 19, 2023 </span>
 
 In this article, we will cover a range of JavaScript interview questions, including those related to the latest versions of the language (ES6, ES7, ES8, and ES9).
 
@@ -1018,3 +1018,96 @@ Since a and b reference the same array, both console.log(a) and console.log(b) w
 This is different from the previous example where ... spread operator was used, which created a new array with the same values as the original array instead of referencing the same array.
 
 </details>
+
+<details>
+<summary>
+    <h3>34. Guess the output of the following code that uses the typeof operator.</h3>
+
+```js
+console.log(typeof 42);
+console.log(typeof "Hello");
+console.log(typeof true);
+console.log(typeof [1, 2, 3]);
+console.log(typeof { name: "John", age: 25 });
+console.log(typeof null);
+console.log(typeof undefined);
+console.log(typeof function () {});
+```
+
+</summary>
+Answer:
+
+```bash
+bash
+Copy code
+number
+string
+boolean
+object
+object
+object
+undefined
+function
+```
+
+The typeof operator in JavaScript is used to determine the type of a value or expression. Here's the breakdown of the output:
+
+- typeof 42 returns "number" because 42 is a numeric value.
+- typeof "Hello" returns "string" because "Hello" is a string.
+- typeof true returns "boolean" because true is a boolean value.
+- typeof [1, 2, 3] returns "object" because arrays are considered objects in JavaScript.
+- typeof { name: "John", age: 25 } returns "object" because objects are considered objects in JavaScript.
+- typeof null returns "object", which is a known quirk in JavaScript. null is considered an object type.
+- typeof undefined returns "undefined" because it is a special value in JavaScript representing an uninitialized variable.
+- typeof function() {} returns "function" because it is a function object.
+
+</details>
+
+<details>
+<summary>
+    <h3>35. Write a function in JavaScript to determine the type of a value.</h3>
+
+```javascript
+console.log(getType(42));
+console.log(getType("Hello"));
+console.log(getType(true));
+console.log(getType([1, 2, 3]));
+console.log(getType({ name: "John", age: 25 }));
+console.log(getType(null));
+console.log(getType(undefined));
+console.log(getType(function () {}));
+
+//The function should print "array" for "[]" and "null" for "null" types.
+```
+
+</summary>
+Answer:
+
+```js
+const getType = (val) => (val === null ? null : val?.constructor.name);
+```
+
+The output of the code will be:
+
+```bash
+number
+string
+boolean
+Array
+Object
+null
+undefined
+Function
+```
+
+The function getType takes a value as an argument and returns its type. If the value is null, it returns null. Otherwise, it uses the constructor.name property to determine the type of the value.
+
+- getType(42) returns "number" because 42 is a numeric value.
+- getType("Hello") returns "string" because "Hello" is a string.
+- getType(true) returns "boolean" because true is a boolean value.
+- getType([1, 2, 3]) returns "Array" because arrays are considered objects in JavaScript, and the constructor name for an array is "Array".
+- getType({ name: "John", age: 25 }) returns "Object" because objects are considered objects in JavaScript, and the constructor name for an object is "Object".
+- getType(null) returns null because null is a special value in JavaScript.
+- getType(undefined) returns "undefined" because it is a special value in JavaScript representing an uninitialized variable.
+- getType(function() {}) returns "Function" because it is a function object, and the constructor name for a function is "Function".
+- The getType function can be used to dynamically determine the type of values in JavaScript.
