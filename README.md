@@ -4,7 +4,7 @@ description: "Prepare for your next 2023 JavaScript interview with these tricky 
 githubPath: "https://github.com/Vasu7389/JavaScript-Interview-Questions-2023"
 ---
 
-<span style=" font-size: 1rem; border-bottom: 1px solid grey;"> Updated May 19, 2023 </span>
+<span style=" font-size: 1rem; border-bottom: 1px solid grey;"> Updated June 22, 2023 </span>
 
 In this article, we will cover a range of JavaScript interview questions, including those related to the latest versions of the language (ES6, ES7, ES8, and ES9).
 
@@ -1148,3 +1148,171 @@ The function getType takes a value as an argument and returns its type. If the v
 - getType(undefined) returns "undefined" because it is a special value in JavaScript representing an uninitialized variable.
 - getType(function() {}) returns "Function" because it is a function object, and the constructor name for a function is "Function".
 - The getType function can be used to dynamically determine the type of values in JavaScript.
+
+</details>
+
+<details>
+<summary>
+ <h3>37. Which of the following options accurately describes the output or error thrown by the code above?</h3>
+
+```js
+function calculateSum() {
+  console.log(result);
+  var num1 = 5;
+  let num2 = 10;
+  const num3 = 15;
+  var result = num1 + num2 + num3;
+}
+
+calculateSum();
+```
+
+- A: 30
+- B: undefined
+- C: ReferenceError
+- D: TypeError
+
+</summary>
+
+Answer -  
+B: undefined
+
+In the code, the variable result is declared using the var keyword, but it is assigned a value after the console.log statement.
+
+When JavaScript executes the function calculateSum(), it hoists the variable declaration of result to the top of the function scope. However, since the assignment of the value num1 + num2 + num3 comes after the console.log statement, the variable is undefined at the point of the console.log.
+
+So, the code is effectively interpreted like this:
+
+```js
+function calculateSum() {
+  var result; // Variable declaration is hoisted to the top
+
+  console.log(result); // undefined
+
+  var num1 = 5;
+  let num2 = 10;
+  const num3 = 15;
+  result = num1 + num2 + num3; // Assignment is performed here
+}
+
+calculateSum();
+```
+
+Since the variable result is hoisted, it exists in the function scope but does not have any assigned value until after the console.log statement. Therefore, when console.log(result) is executed, the variable result exists but is undefined.
+
+</details>
+
+<details>
+<summary>
+<h3>38. What will be the output of the following code snippet?</h3>
+
+```javascript
+let x = 10;
+
+function updateX() {
+  if (true) {
+    let x = 20;
+    console.log(x);
+  }
+  console.log(x);
+}
+
+updateX();
+```
+
+- A: 20, 10
+- B: 20, 20
+- C: 10, 10
+- D: 10, 20
+
+</summary>
+
+Answer -  
+B: 20, 10
+
+In this code, the variable `x` is declared and assigned a value of `10` outside the `updateX` function.
+
+Inside the function, a new block is created using an `if` statement. Within that block, a new variable `x` is declared and assigned a value of `20` using `let`. This creates a separate scope for the inner `x`, which is only accessible within the `if` block.
+
+When the `console.log` statements are executed, the first one inside the `if` block will output `20`, as it refers to the inner `x` variable. The second `console.log` statement outside the `if` block will output `10`, as it refers to the outer `x` variable.
+
+Therefore, the output will be `20, 10`.
+
+</details>
+
+<details>
+<summary>
+<h3>39. What will be the output of the following code snippet?</h3>
+
+```javascript
+const person = {
+  name: "John",
+  age: 30,
+};
+
+Object.freeze(person);
+person.age = 40;
+
+console.log(person.age);
+```
+
+- A: 30
+- B: 40
+- C: TypeError
+- D: ReferenceError
+
+</summary>
+
+Answer -  
+A: 30
+
+In this code, the `Object.freeze()` method is used to make
+
+the `person` object immutable. This means that the properties of the object cannot be modified.
+
+When attempting to assign a new value to `person.age` after freezing the object, it does not throw an error or modify the object. Instead, it silently fails in non-strict mode and throws a TypeError in strict mode.
+
+Since the code is not running in strict mode, the assignment `person.age = 40` does not have any effect. Therefore, when `console.log(person.age)` is executed, it will output the original value of `30`.
+
+Hence, the output will be `30`.
+
+</details>
+
+<details>
+<summary>
+<h3>40. What will be the output of the following code snippet?</h3>
+
+```javascript
+function foo() {
+  let x = 1;
+
+  function bar() {
+    let y = 2;
+    console.log(x + y);
+  }
+
+  bar();
+}
+
+foo();
+```
+
+- A: 1
+- B: 2
+- C: 3
+- D: ReferenceError
+
+</summary>
+
+Answer -  
+C: 3
+
+In this code, there are two nested functions: `foo` and `bar`. The variable `x` is declared and assigned a value of `1` within the `foo` function, while the variable `y` is declared and assigned a value of `2` within the `bar` function.
+
+When the `foo` function is called, it invokes the `bar` function. Inside the `bar` function, the values of `x` and `y` are accessed and summed together using `console.log(x + y)`.
+
+Since `x` is accessible within the `bar` function due to lexical scoping, the value of `x` is `1`. Similarly, the value of `y` is `2`. Therefore, the output of `console.log(x + y)` will be `3`.
+
+Hence, the correct answer is C: 3.
+
+</details>
