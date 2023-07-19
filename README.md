@@ -4,7 +4,7 @@ description: "Prepare for your next 2023 JavaScript interview with these tricky 
 githubPath: "https://github.com/Vasu7389/JavaScript-Interview-Questions-2023"
 ---
 
-<span style=" font-size: 1rem; border-bottom: 1px solid grey;"> Updated June 22, 2023 </span>
+<span style=" font-size: 1rem; border-bottom: 1px solid grey;"> Updated July 19, 2023 </span>
 
 In this article, we will cover a range of JavaScript interview questions, including those related to the latest versions of the language (ES6, ES7, ES8, and ES9).
 
@@ -1314,5 +1314,136 @@ When the `foo` function is called, it invokes the `bar` function. Inside the `ba
 Since `x` is accessible within the `bar` function due to lexical scoping, the value of `x` is `1`. Similarly, the value of `y` is `2`. Therefore, the output of `console.log(x + y)` will be `3`.
 
 Hence, the correct answer is C: 3.
+
+</details>
+
+<details>
+<summary>
+<h3>41. What will be the output of the following code snippet?</h3>
+
+```javascript
+let x = 10;
+
+function outer() {
+  console.log(x);
+
+  if (false) {
+    var x = 20;
+  }
+}
+
+outer();
+```
+
+- A: 10
+- B: 20
+- C: undefined
+- D: ReferenceError
+
+</summary>
+
+Answer:
+C: undefined
+
+In this code snippet, there's a variable hoisting issue with the var declaration inside the outer function. The variable x is declared using var within the outer function scope.
+
+When the function outer() is called, the console.log(x) statement is executed. At this point, the variable x is hoisted to the top of the function scope and is initialized with undefined. This means that the local variable x inside the function is different from the global x.
+
+The if (false) block will not be executed, so the assignment var x = 20; will not take place.
+
+Thus, the console.log(x) statement inside the outer function will log the value of the locally hoisted variable x, which is undefined.
+
+Hence, the correct answer is C: undefined.
+
+</details>
+
+<details>
+<summary>
+<h3>42. What will be the output of the following code snippet?</h3>
+
+```javascript
+const obj = {
+  a: 1,
+  b: 2,
+  c: {
+    a: 3,
+    b: 4,
+  },
+};
+
+const {
+  a,
+  b,
+  c: { a: nestedA },
+} = obj;
+
+console.log(a, b, nestedA);
+```
+
+- A: 1 2 3
+- B: 1 2 4
+- C: 3 2 1
+- D: SyntaxError
+
+</summary>
+
+Answer:
+A: 1 2 3
+
+This code snippet uses destructuring assignment to extract values from the `obj` object. It extracts the properties `a`, `b`, and the nested property `a` from the `c` object and assigns them to the corresponding variables `a`, `b`, and `nestedA`, respectively.
+
+After destructuring, the variables will hold the following values:
+
+- `a`: 1 (value of `obj.a`)
+- `b`: 2 (value of `obj.b`)
+- `nestedA`: 3 (value of `obj.c.a`)
+
+When `console.log(a, b, nestedA)` is executed, it will print `1 2 3`, as the values of the variables match the above assignments.
+
+Hence, the correct answer is A: 1 2 3.
+
+</details>
+
+<details>
+<summary>
+<h3>43. What will be the output of the following code snippet?</h3>
+
+```javascript
+function* generatorFunction() {
+  yield 1;
+  yield 2;
+  return 3;
+}
+
+const generator = generatorFunction();
+
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
+```
+
+- A: { value: 1, done: false }, { value: 2, done: false }, { value: 3, done: true }
+- B: { value: 1, done: false }, { value: 2, done: false }, { value: undefined, done: true }
+- C: { value: 1, done: true }, { value: 2, done: true }, { value: 3, done: true }
+- D: SyntaxError
+
+</summary>
+
+Answer:
+A: { value: 1, done: false }, { value: 2, done: false }, { value: 3, done: true }
+
+This code snippet demonstrates the use of a generator function. When a generator function is called, it returns an iterator object, which can be used to control the execution of the generator function.
+
+The `generatorFunction` is a generator function that yields three values: `1`, `2`, and `3`. The `yield` keyword pauses the execution and returns the yielded value. When the generator is finished, it returns the value using the `return` statement.
+
+When the generator is executed step by step using `generator.next()`, it proceeds through the generator function's code, stopping at each `yield` statement.
+
+- The first call to `generator.next()` will return `{ value: 1, done: false }`, indicating that the first value yielded is `1`, and the generator is not yet done.
+- The second call to `generator.next()` will return `{ value: 2, done: false }`, indicating that the second value yielded is `2`, and the generator is not yet done.
+- The third call to `generator.next()` will return `{ value: 3, done: true }`, indicating that the third value yielded is `3`, and the generator is done (`done` is `true`).
+
+After the generator is done, any further calls to `generator.next()` will keep returning `{ value: undefined, done: true }`.
+
+Hence, the correct answer is A: { value: 1, done: false }, { value: 2, done: false }, { value: 3, done: true }.
 
 </details>
