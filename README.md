@@ -4,7 +4,7 @@ description: "Prepare for your next 2023 JavaScript interview with these tricky 
 githubPath: "https://github.com/Vasu7389/JavaScript-Interview-Questions-2023"
 ---
 
-<span style=" font-size: 1rem; border-bottom: 1px solid grey;"> Updated July 19, 2023 </span>
+<span style=" font-size: 1rem; border-bottom: 1px solid grey;"> Updated Sept 14, 2023 </span>
 
 In this article, we will cover a range of JavaScript interview questions, including those related to the latest versions of the language (ES6, ES7, ES8, and ES9).
 
@@ -1445,5 +1445,47 @@ When the generator is executed step by step using `generator.next()`, it proceed
 After the generator is done, any further calls to `generator.next()` will keep returning `{ value: undefined, done: true }`.
 
 Hence, the correct answer is A: { value: 1, done: false }, { value: 2, done: false }, { value: 3, done: true }.
+
+</details>
+
+<details>
+<summary>
+<h3>44. Write a function to make the following code snippet work?</h3>
+
+```js
+console.log(sum(4, 6, 8, 10).value); //output - 28
+console.log(sum(4)(6)(8)(10).value); //output - 28
+```
+
+</summary>
+
+Answer
+
+```js
+function sum(...args) {
+  const ans = args.reduce((a, b) => a + b, 0); //just to get sum of all the array elements
+
+  const myFunc = (num) => {
+    return sum(num, ...args);
+  };
+
+  myFunc.value = ans;
+
+  return myFunc;
+}
+
+console.log(sum(4, 6, 8, 10).value); //output - 28
+console.log(sum(4)(6)(8)(10).value); //output - 28
+```
+
+The sum function takes any number of arguments using the rest parameter ...args and calculates the sum of those arguments.
+
+It defines a nested function called myFunc, which takes a new number num and returns a new instance of the sum function with the accumulated sum and the new number.
+
+The current sum value is assigned to a property named value on myFunc.
+
+The myFunc function is then returned, allowing you to chain multiple function calls together.
+
+As a result, you can use this sum function to either pass all numbers at once or chain multiple function calls to add numbers incrementally, and it will provide the correct sum when you access the value property.
 
 </details>
