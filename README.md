@@ -14,30 +14,6 @@ Additionally, we'll include multiple choice questions (MCQs) on ES6 and explore 
 
 Whether you're preparing for a job interview or simply want to brush up on your knowledge of the language, this article has something for you.
 
-## Join the Community: Contribute to the Open-Source Project on JavaScript Interview Questions
-
-👋 Hey there! Welcome to our open-source project on Tricky JavaScript Code Snippets asked in the Interview.
-
-🚀 As a JavaScript developer, I know how important it is to stay up-to-date with the latest technologies and best practices. That's why I've created this <span style="text-decoration: underline;color: var(--theme-sub-color);">
-[repository](https://github.com/Vasu7389/JavaScript-Interview-Questions-2023)</span> to help fellow developers prepare for their JavaScript interviews in 2023. 🤓
-
-The repository contains a 📝 comprehensive list of code snippets covering various topics such as ES6, ES7, ES8, and ES9 features. Each snippet comes with a detailed explanation, providing a clear understanding of the concept and usage. 🙌
-
-But hey, I don't know everything!
-
-That's where you come in.
-
-I invite you to contribute to this open-source project.
-
-Whether you want to suggest a new snippet, provide feedback on an existing one, or improve the explanation, your contributions are welcome and appreciated. I've set up guidelines for contributions and a code of conduct to ensure that everyone feels welcome and valued. 💖
-
-In addition to contributing, you can also use this <span style="text-decoration: underline;color: var(--theme-sub-color);">
-[repository](https://github.com/Vasu7389/JavaScript-Interview-Questions-2023)</span> as a study guide to prepare for your JavaScript interviews.
-
-Explore the code snippets, review the explanations, and practice your skills. 📚
-
-Thank you for your interest in this project, and I look forward to collaborating with you.
-
 ## Javascript ES6 ES7 ES8
 
 ECMAScript (ES) is a standardized version of JavaScript, a programming language that is widely used to create interactive web pages and applications. ECMAScript is a formal specification developed and maintained by the Ecma International organization.
