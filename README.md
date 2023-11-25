@@ -4,7 +4,7 @@ description: "Prepare for your next 2023 JavaScript interview with these tricky 
 githubPath: "https://github.com/Vasu7389/JavaScript-Interview-Questions-2023"
 ---
 
-<span style=" font-size: 1rem; border-bottom: 1px solid grey;"> Updated Sept 14, 2023 </span>
+<span style=" font-size: 1rem; border-bottom: 1px solid grey;"> Updated Nov 25, 2023 </span>
 
 In this article, we will cover a range of JavaScript interview questions, including those related to the latest versions of the language (ES6, ES7, ES8, and ES9).
 
@@ -1463,5 +1463,61 @@ The current sum value is assigned to a property named value on myFunc.
 The myFunc function is then returned, allowing you to chain multiple function calls together.
 
 As a result, you can use this sum function to either pass all numbers at once or chain multiple function calls to add numbers incrementally, and it will provide the correct sum when you access the value property.
+
+</details>
+
+<details>
+<summary>
+<h3>Understanding the `.sort()` Method Variations</h3>
+
+```js
+const fruits = ["banana", "apple", "orange", "grape", "kiwi"];
+
+// Task 1: Sort the array of fruits in alphabetical order (default behavior)
+// Task 2: Sort the array of fruits in descending alphabetical order
+// Task 3: Sort the array of fruits based on the length of the fruit names in ascending order
+// Task 4: Sort the array of fruits in ascending order by the second character of each fruit name
+```
+
+</summary>
+
+Answer
+
+Task 1: Sort in alphabetical order (default behavior)
+
+```js
+const alphabeticalOrder = [...fruits].sort();
+console.log(alphabeticalOrder); // Output: ['apple', 'banana', 'grape', 'kiwi', 'orange']
+```
+
+Task 2: Sort in descending alphabetical order
+
+```js
+const descendingOrder = [...fruits].sort((a, b) => b.localeCompare(a));
+console.log(descendingOrder); // Output: ['orange', 'kiwi', 'grape', 'banana', 'apple']
+```
+
+Task 3: Sort based on the length of the fruit names in ascending order
+
+```js
+const sortByLength = [...fruits].sort((a, b) => a.length - b.length);
+console.log(sortByLength); // Output: ['kiwi', 'apple', 'grape', 'banana', 'orange']
+```
+
+Task 4: Sort in ascending order by the second character of each fruit name
+
+```js
+const sortBySecondChar = [...fruits].sort((a, b) => a[1].localeCompare(b[1]));
+console.log(sortBySecondChar); // Output: ['banana', 'kiwi', 'apple', 'orange', 'grape']
+```
+
+Explanation:
+
+- Task 1 utilizes the default behavior of `.sort()` to arrange elements alphabetically.
+- Task 2 reverses the order by using `localeCompare()` with the reverse comparison.
+- Task 3 sorts the array by the length of the elements, ensuring ascending order.
+- Task 4 specifically compares the second character of each element for sorting.
+
+These variations demonstrate different uses of the `.sort()` method by customizing the sorting logic through comparator functions, enabling diverse sorting patterns for arrays.
 
 </details>
