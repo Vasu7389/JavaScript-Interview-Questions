@@ -1468,7 +1468,7 @@ As a result, you can use this sum function to either pass all numbers at once or
 
 <details>
 <summary>
-<h3>Understanding the `.sort()` Method Variations</h3>
+<h3>45. Understanding the `.sort()` Method Variations</h3>
 
 ```js
 const fruits = ["banana", "apple", "orange", "grape", "kiwi"];
