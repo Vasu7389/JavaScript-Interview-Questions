@@ -1,10 +1,10 @@
 ---
 title: "Tricky Javascript Code Snippets Asked in the Interview (es6/es7/es8/es9)"
-description: "Prepare for your next 2023 JavaScript interview with these tricky code snippets. Covering ES6/ES7/ES8/ES9 syntax and features, this article provides examples and explanations to help you ace your interview."
-githubPath: "https://github.com/Vasu7389/JavaScript-Interview-Questions-2023"
+description: "Prepare for your next 2024 JavaScript interview with these tricky code snippets. Covering ES6/ES7/ES8/ES9 syntax and features, this article provides examples and explanations to help you ace your interview."
+githubPath: "https://github.com/Vasu7389/JavaScript-Interview-Questions"
 ---
 
-<span style=" font-size: 1rem; border-bottom: 1px solid grey;"> Updated Nov 25, 2023 </span>
+<span style=" font-size: 1rem; border-bottom: 1px solid grey;"> Updated Jan 02, 2024 </span>
 
 In this article, we will cover a range of JavaScript interview questions, including those related to the latest versions of the language (ES6, ES7, ES8, and ES9).
 
