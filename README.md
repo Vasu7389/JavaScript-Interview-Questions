@@ -4,7 +4,7 @@ description: "Prepare for your next 2024 JavaScript interview with these tricky 
 githubPath: "https://github.com/Vasu7389/JavaScript-Interview-Questions"
 ---
 
-<span style=" font-size: 1rem; border-bottom: 1px solid grey;"> Updated Jan 02, 2024 </span>
+<span style=" font-size: 1rem; border-bottom: 1px solid grey;"> Updated Jan 07, 2024 </span>
 
 In this article, we will cover a range of JavaScript interview questions, including those related to the latest versions of the language (ES6, ES7, ES8, and ES9).
 
@@ -1519,5 +1519,35 @@ Explanation:
 - Task 4 specifically compares the second character of each element for sorting.
 
 These variations demonstrate different uses of the `.sort()` method by customizing the sorting logic through comparator functions, enabling diverse sorting patterns for arrays.
+
+</details>
+
+<details>
+<summary>
+<h3>46. Explain the output of the following code and correct any errors.</h3>
+
+```javascript
+let numbers = [1, 2, 3, 4, 5];
+numbers = numbers.map((number) => number * 2);
+console.log(numbers.reduce((total, num) => total + num));
+```
+
+</summary>
+
+**Answer:**
+
+```javascript
+// Output: 30 (No errors in the code)
+```
+
+**Explanation:**
+
+1. **Array Creation:** The code starts by creating an array named `numbers` containing the values `[1, 2, 3, 4, 5]`.
+
+2. **Array Mapping:** The `map()` method is used to create a new array by applying a function to each element of the original array. In this case, the function `number => number * 2` doubles each number in the array. The new array becomes `[2, 4, 6, 8, 10]`.
+
+3. **Array Reduction:** The `reduce()` method is used to reduce the array to a single value by applying a function against an accumulator and each element in the array (from left to right). The function `(total, num) => total + num` adds each number in the array to the `total`, starting with an initial `total` of 0.
+
+4. **Output:** The final `console.log()` statement outputs the result of the `reduce()` operation, which is 30 (the sum of all the doubled numbers in the array).
 
 </details>
