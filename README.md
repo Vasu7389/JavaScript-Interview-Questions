@@ -1050,9 +1050,7 @@ console.log(typeof function () {});
 </summary>
 Answer:
 
-```bash
-bash
-Copy code
+```
 number
 string
 boolean
