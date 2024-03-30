@@ -4,7 +4,7 @@ description: "Prepare for your next 2024 JavaScript interview with these tricky 
 githubPath: "https://github.com/Vasu7389/JavaScript-Interview-Questions"
 ---
 
-<span style=" font-size: 1rem; border-bottom: 1px solid grey;"> Updated Jan 07, 2024 </span>
+<span style=" font-size: 1rem; border-bottom: 1px solid grey;"> Updated Mar 31, 2024 </span>
 
 In this article, we will cover a range of JavaScript interview questions, including those related to the latest versions of the language (ES6, ES7, ES8, and ES9).
 
@@ -1548,4 +1548,48 @@ console.log(numbers.reduce((total, num) => total + num));
 
 4. **Output:** The final `console.log()` statement outputs the result of the `reduce()` operation, which is 30 (the sum of all the doubled numbers in the array).
 
+</details>
+
+<details>
+<summary>
+<h3>47. Write a JavaScript function that takes an array of numbers as input and returns a new array containing only the even numbers.</h3>
+
+_*You can't use built-in methods like filter or forEach._
+
+</summary>
+
+**Answer:**
+
+Approach 1: Using a loop and conditional statement
+
+```js
+function findEvenNumbers(numberArray) {
+  const evenNumbers = [];
+  for (let i = 0; i < numberArray.length; i++) {
+    if (numberArray[i] % 2 === 0) {
+      evenNumbers.push(numberArray[i]);
+    }
+  }
+  return evenNumbers;
+}
+```
+
+Approach 2: Using recursion and conditional statement
+
+```js
+function findEvenNumbersRecursive(numberArray) {
+  if (numberArray.length === 0) {
+    return [];
+  }
+
+  const firstNumber = numberArray[0];
+  const remainingNumbers = numberArray.slice(1);
+
+  if (firstNumber % 2 === 0) {
+    return [firstNumber].concat(findEvenNumbersRecursive(remainingNumbers));
+  } else {
+    return findEvenNumbersRecursive(remainingNumbers);
+  }
+}
+```
 </details>
