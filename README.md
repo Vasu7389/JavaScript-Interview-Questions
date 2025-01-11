@@ -4,7 +4,7 @@ description: "Prepare for your next 2024 JavaScript interview with these tricky 
 githubPath: "https://github.com/Vasu7389/JavaScript-Interview-Questions"
 ---
 
-<span style=" font-size: 1rem; border-bottom: 1px solid grey;"> Updated Mar 31, 2024 </span>
+<span style=" font-size: 1rem; border-bottom: 1px solid grey;"> Updated Jan 11, 2025 </span>
 
 In this article, we will cover a range of JavaScript interview questions, including those related to the latest versions of the language (ES6, ES7, ES8, and ES9).
 
@@ -26,7 +26,7 @@ ECMAScript and JavaScript are closely related, and the terms are often used inte
 
 <details>
 <summary>
-    <h3>1. Guess the output of this code?
+    <h3>1. Guess the output of this code? <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
 
 ```js
 let a = {};
@@ -39,7 +39,7 @@ a[c] = 456;
 console.log(a[b]);
 ```
 
-</h3>
+</h3> 
 </summary>
 
 The output of this code will be `456`.
@@ -62,7 +62,7 @@ So the object `a` looks like -
 
 <details>
 <summary>
-    <h3>2. Guess the output of this code?
+    <h3>2. Guess the output of this code? <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
 
 ```js
 let obj1 = { key: "value" };
@@ -91,7 +91,7 @@ In this case, the value of the key property for obj1 was changed to "new value" 
 
 <details>
 <summary>
-    <h3>3. Guess the output of this JavaScript code?
+    <h3>3. Guess the output of this JavaScript code?  <span class="level-tag level-2">Intermediate <span style='font-size:15px;'>&#128641;</span></span>
 
 ```js
 const obj = {
@@ -120,7 +120,7 @@ When the variable c is assigned the value of obj.b, it is a reference to the fun
 
 <details>
 <summary>
-    <h3>4. Guess the output of this code?
+    <h3>4. Guess the output of this code? <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
 
 ```js
 const x = { foo: 1 };
@@ -143,7 +143,7 @@ The addFoo function takes an object as an argument and returns the value of obj.
 </details>
 <details>
 <summary>
-    <h3>5. Guess the output of below JavaScript code?
+    <h3>5. Guess the output of below JavaScript code? <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
 
 ```js
 const arr = [1, 2, 3, 4, 5];
@@ -164,7 +164,7 @@ The setTimeout function is called inside of a loop that iterates through the ele
 </details>
 <details>
 <summary>
-    <h3>6. Guess the output of this JavaScript code?
+    <h3>6. Guess the output of this JavaScript code? <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
 
 ```js
 const arr = [1, 2, 3, 4, 5];
@@ -184,7 +184,7 @@ The forEach method is called on the arr array and a callback function is passed 
 
 <details>
 <summary>
-    <h3>7. Guess the output of this code?
+    <h3>7. Guess the output of this code? <div class="level-tag level-3">Expert <span style='font-size:15px;'>&#128640;</span></div>
 
 ```js
 let x = 1;
@@ -206,7 +206,7 @@ The if statement is evaluating the function f as a boolean value. In JavaScript,
 
 <details>
 <summary>
-    <h3>8. Guess the output of this code?
+    <h3>8. Guess the output of this code? <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
 
 ```js
 let a = {
@@ -230,7 +230,7 @@ JavaScript objects are passed by reference. So when we assigned a object to b. b
 
 <details>
 <summary>
-    <h3>9. Guess the output of this code?
+    <h3>9. Guess the output of this code?  <span class="level-tag level-2">Intermediate <span style='font-size:15px;'>&#128641;</span></span>
 
 ```js
 let x = [1, 2, 3];
@@ -258,7 +258,7 @@ When comparing two objects with the == operator, it compares their references, n
 
 <details>
 <summary>
-    <h3>10. Guess the output of the below JavaScript code?
+    <h3>10. Guess the output of the below JavaScript code? <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
 
 ```js
 var x = 0;
@@ -298,7 +298,7 @@ So all the 5 `callbacks` logs the values in `incremental` way, which is `1 2 3 4
 
 <details>
 <summary>
-    <h3>11. Guess the output of this JavaScript code?
+    <h3>11. Guess the output of this JavaScript code? <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
 
 ```js
 let a = { x: 1 };
@@ -329,7 +329,7 @@ So, the output of the code is 2 4 6 8 10.
 
 <details>
 <summary>
-    <h3>12. Guess the output of the JavaScript code?
+    <h3>12. Guess the output of the JavaScript code? <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
 
 ```js
 let num = 0;
@@ -363,7 +363,7 @@ Because the global and local variables have different scope and different memory
 
 <details>
 <summary>
-    <h3>13. Guess the output of the below JavaScript code?
+    <h3>13. Guess the output of the below JavaScript code? <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
 
 ```js
 let obj = { name: "John", age: 25 };
@@ -393,7 +393,7 @@ It doesn't affect the original object `obj`.
 
 <details>
 <summary>
-    <h3>14. Guess the output of the below JavaScript code?
+    <h3>14. Guess the output of the below JavaScript code?  <span class="level-tag level-2">Intermediate <span style='font-size:15px;'>&#128641;</span></span>
 
 ```js
 const add = (a = 1, b = 2) => a + b;
@@ -425,7 +425,7 @@ The third console.log statement logs the result of add(undefined, 10) which is 1
 
 <details>
 <summary>
-    <h3>15. Guess the output of the below JavaScript code?
+    <h3>15. Guess the output of the below JavaScript code? <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
 
 ```js
 const name = "John";
@@ -456,7 +456,7 @@ In `ES6+`, you can use object literal notation to create objects with properties
 
 <details>
 <summary>
-    <h3>16. Guess the output of the below JavaScript code?
+    <h3>16. Guess the output of the below JavaScript code?  <span class="level-tag level-2">Intermediate <span style='font-size:15px;'>&#128641;</span></span>
 
 ```js
 const arr = [1, 2, 3];
@@ -494,7 +494,7 @@ In ES6+, you can use destructuring assignment to extract values from arrays and 
 
 <details>
 <summary>
-    <h3>17. What is the output of the below JavaScript code and why?
+    <h3>17. What is the output of the below JavaScript code and why? <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
 
 ```js
 console.log(typeof null);
@@ -526,7 +526,8 @@ null == undefined is true because `==` is the loose equality operator in JavaScr
 
 <details>
 <summary>
-    <h3>18. Write a function in JavaScript that takes an array of numbers and returns the sum of all positive numbers in the array.
+    <h3>18. Write a function in JavaScript that takes an array of numbers and returns the sum of all positive numbers in the array. <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
+
 </h3>
 </summary>
 Answer:
@@ -555,7 +556,8 @@ In the example usage, we pass an array `[1, -2, 3, 4, -5, 6]` to the sumOfPositi
 
 <details>
 <summary>
-    <h3>19. Write a function in JavaScript that takes a string as input and returns a new string with all the vowels removed.
+    <h3>19. Write a function in JavaScript that takes a string as input and returns a new string with all the vowels removed.  <span class="level-tag level-2">Intermediate <span style='font-size:15px;'>&#128641;</span></span>
+
 </h3>
 </summary>
 Answer:
@@ -585,7 +587,8 @@ In the example usage, we pass a string 'This is a test string with vowels' to th
 
 <details>
 <summary>
-    <h3>20. Write a function in JavaScript that takes an array of strings as input and returns a new array with the strings sorted in alphabetical order.
+    <h3>20. Write a function in JavaScript that takes an array of strings as input and returns a new array with the strings sorted in alphabetical order. <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
+
 </h3>
 </summary>
 Answer:
@@ -608,7 +611,8 @@ In the example usage, we pass an array of strings `['apple', 'banana', 'cherry',
 
 <details>
 <summary>
-    <h3>21. Write a function in JavaScript that checks if a string is a palindrome.
+    <h3>21. Write a function in JavaScript that checks if a string is a palindrome. <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
+
 </h3>
 </summary>
 Answer:
@@ -632,7 +636,8 @@ In the example usage, we pass the strings `racecar` and `hello` to the isPalindr
 
 <details>
 <summary>
-    <h3>22. Write a function in JavaScript that finds the second highest number in an array of numbers.
+    <h3>22. Write a function in JavaScript that finds the second highest number in an array of numbers. <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
+
 </h3>
 </summary>
 Answer:
@@ -656,7 +661,8 @@ In the example usage, we pass the array `[10, 5, 20, 15, 8]` to the findSecondHi
 
 <details>
 <summary>
-    <h3>23. Write a function in JavaScript that removes duplicates from an array.
+    <h3>23. Write a function in JavaScript that removes duplicates from an array. <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
+
 </h3>
 </summary>
 Answer:
@@ -705,7 +711,8 @@ In the example usage, we pass the numbers 5 and 7 to the add function. The funct
 
 <details>
 <summary>
-    <h3>25. Write a function in JavaScript that checks if a given string is a valid IPv4 address.</h3>
+    <h3>25. Write a function in JavaScript that checks if a given string is a valid IPv4 address.</h3>  <span class="level-tag level-2">Intermediate <span style='font-size:15px;'>&#128641;</span></span>
+
 </summary>
 Answer:
 
@@ -744,8 +751,9 @@ In the example usage, we pass the strings '192.168.0.1' and '256.0.0.0' to the i
 
 <details>
 <summary>
-    <h3>26. Write a function in JavaScript that converts a given string to title case.</h3>
-</summary>
+    <h3>26. Write a function in JavaScript that converts a given string to title case. <span class="level-tag level-3">Expert <span style='font-size:15px;'>&#128640;</span></span>
+</h3>
+</summary> 
 Answer:
 
 ```jsx
@@ -769,7 +777,8 @@ In the example usage, we pass the string 'the quick brown fox' to the toTitleCas
 
 <details>
 <summary>
-    <h3>27. Write a function in JavaScript that generates a random hexadecimal color code.</h3>
+    <h3>27. Write a function in JavaScript that generates a random hexadecimal color code. <span class="level-tag level-3">Expert <span style='font-size:15px;'>&#128640;</span></span>
+  </h3>
 </summary>
 Answer:
 
@@ -801,7 +810,7 @@ In the example usage, we call the getRandomColor function, which returns a rando
 
 <details>
 <summary>
-    <h3>28. Guess the output of the following code:</h3>
+    <h3>28. Guess the output of the following code:</h3> <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
 
 ```jsx
 let x = 5;
@@ -835,7 +844,7 @@ The first `console.log()` statement inside the block will print 10, because x re
 
 <details>
 <summary>
-    <h3>29. Guess the output of the following code:</h3>
+    <h3>29. Guess the output of the following code:</h3> <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
 
 ```jsx
 const obj = { a: 1, b: 2, c: 3 };
@@ -863,7 +872,7 @@ The console.log() statement then prints the values of the a and b variables, whi
 
 <details>
 <summary>
-    <h3>30. Guess the output of the following code:</h3>
+    <h3>30. Guess the output of the following code:</h3>  <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
 
 ```jsx
 const arr1 = [1, 2, 3];
@@ -894,7 +903,7 @@ The console.log() statement then prints the contents of arr3, which are the elem
 
 <details>
 <summary>
-    <h3>31. What is the output of the following code?</h3>
+    <h3>31. What is the output of the following code?</h3> <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
 
 ```jsx
 const arr1 = [1, 2, 3];
@@ -929,7 +938,7 @@ Therefore, the first console.log(arr1) prints [1, 2, 3] and the second console.l
 
 <details>
 <summary>
-    <h3>32. What is the output of the following code?</h3>
+    <h3>32. What is the output of the following code?</h3> <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
 
 ```jsx
 const x = 10;
@@ -962,7 +971,7 @@ Therefore, when console.log(x) is called in the foo function, the local variable
 
 <details>
 <summary>
-    <h3>33. What is the output of the following code?</h3>
+    <h3>33. What is the output of the following code?</h3> <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
 
 ```jsx
 const a = [1, 2, 3];
@@ -997,7 +1006,7 @@ This is different from the previous example where ... spread operator was used, 
 
 <details>
 <summary>
-    <h3>34. What is the output of the following code?</h3>
+    <h3>34. What is the output of the following code?</h3>  <span class="level-tag level-2">Intermediate <span style='font-size:15px;'>&#128641;</span></span>
 
 ```jsx
 const companies = [
@@ -1034,7 +1043,7 @@ Otherwise, if the "name" property of "a" comes after the "name" property of "b" 
 
 <details>
 <summary>
-    <h3>35. Guess the output of the following code that uses the typeof operator.</h3>
+    <h3>35. Guess the output of the following code that uses the typeof operator.</h3> <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
 
 ```js
 console.log(typeof 42);
@@ -1076,7 +1085,7 @@ The typeof operator in JavaScript is used to determine the type of a value or ex
 
 <details>
 <summary>
-    <h3>36. Write a function in JavaScript to determine the type of a value.</h3>
+    <h3>36. Write a function in JavaScript to determine the type of a value.</h3> <span class="level-tag level-3">Expert <span style='font-size:15px;'>&#128640;</span></span>
 
 ```javascript
 console.log(getType(42));
@@ -1127,7 +1136,7 @@ The function getType takes a value as an argument and returns its type. If the v
 
 <details>
 <summary>
- <h3>37. Which of the following options accurately describes the output or error thrown by the code above?</h3>
+ <h3>37. Which of the following options accurately describes the output or error thrown by the code above?</h3> <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
 
 ```js
 function calculateSum() {
@@ -1178,7 +1187,7 @@ Since the variable result is hoisted, it exists in the function scope but does n
 
 <details>
 <summary>
-<h3>38. What will be the output of the following code snippet?</h3>
+<h3>38. What will be the output of the following code snippet?</h3> <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
 
 ```javascript
 let x = 10;
@@ -1216,7 +1225,7 @@ Therefore, the output will be `20, 10`.
 
 <details>
 <summary>
-<h3>39. What will be the output of the following code snippet?</h3>
+<h3>39. What will be the output of the following code snippet?</h3>  <span class="level-tag level-2">Intermediate <span style='font-size:15px;'>&#128641;</span></span>
 
 ```javascript
 const person = {
@@ -1254,7 +1263,7 @@ Hence, the output will be `30`.
 
 <details>
 <summary>
-<h3>40. What will be the output of the following code snippet?</h3>
+<h3>40. What will be the output of the following code snippet?</h3> <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
 
 ```javascript
 function foo() {
@@ -1293,7 +1302,7 @@ Hence, the correct answer is C: 3.
 
 <details>
 <summary>
-<h3>41. What will be the output of the following code snippet?</h3>
+<h3>41. What will be the output of the following code snippet?</h3> <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
 
 ```javascript
 let x = 10;
@@ -1333,7 +1342,7 @@ Hence, the correct answer is C: undefined.
 
 <details>
 <summary>
-<h3>42. What will be the output of the following code snippet?</h3>
+<h3>42. What will be the output of the following code snippet?</h3>  <span class="level-tag level-2">Intermediate <span style='font-size:15px;'>&#128641;</span></span>
 
 ```javascript
 const obj = {
@@ -1380,7 +1389,7 @@ Hence, the correct answer is A: 1 2 3.
 
 <details>
 <summary>
-<h3>43. What will be the output of the following code snippet?</h3>
+<h3>43. What will be the output of the following code snippet?</h3> <span class="level-tag level-3">Expert <span style='font-size:15px;'>&#128640;</span></span>
 
 ```javascript
 function* generatorFunction() {
@@ -1424,7 +1433,7 @@ Hence, the correct answer is A: { value: 1, done: false }, { value: 2, done: fal
 
 <details>
 <summary>
-<h3>44. Write a function to make the following code snippet work?</h3>
+<h3>44. Write a function to make the following code snippet work?</h3> <span class="level-tag level-3">Expert <span style='font-size:15px;'>&#128640;</span></span>
 
 ```js
 console.log(sum(4, 6, 8, 10).value); //output - 28
@@ -1466,7 +1475,7 @@ As a result, you can use this sum function to either pass all numbers at once or
 
 <details>
 <summary>
-<h3>45. Understanding the `.sort()` Method Variations</h3>
+<h3>45. Understanding the `.sort()` Method Variations</h3> <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
 
 ```js
 const fruits = ["banana", "apple", "orange", "grape", "kiwi"];
@@ -1522,7 +1531,7 @@ These variations demonstrate different uses of the `.sort()` method by customizi
 
 <details>
 <summary>
-<h3>46. Explain the output of the following code and correct any errors.</h3>
+<h3>46. Explain the output of the following code and correct any errors.</h3> <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
 
 ```javascript
 let numbers = [1, 2, 3, 4, 5];
@@ -1552,9 +1561,9 @@ console.log(numbers.reduce((total, num) => total + num));
 
 <details>
 <summary>
-<h3>47. Write a JavaScript function that takes an array of numbers as input and returns a new array containing only the even numbers.</h3>
+<h3>47. Write a JavaScript function that takes an array of numbers as input and returns a new array containing only the even numbers.</h3> <span class="level-tag level-1">Beginner <span style='font-size:15px;'>&#128642;</span></span>
 
-_*You can't use built-in methods like filter or forEach._
+_\*You can't use built-in methods like filter or forEach._
 
 </summary>
 
@@ -1592,4 +1601,5 @@ function findEvenNumbersRecursive(numberArray) {
   }
 }
 ```
+
 </details>
