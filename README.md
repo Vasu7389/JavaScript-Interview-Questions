@@ -1,6 +1,6 @@
 ---
-title: "Tricky Javascript Code Snippets Asked in the Interview (es6/es7/es8/es9)"
-description: "Prepare for your next 2024 JavaScript interview with these tricky code snippets. Covering ES6/ES7/ES8/ES9 syntax and features, this article provides examples and explanations to help you ace your interview."
+title: "Tricky Javascript Code Snippets Questions Asked in the Interview (es6/es7/es8/es9)"
+description: "Prepare for your next 2025 Javascript Coding Interview Questions with these tricky code snippets. Covering ES6/ES7/ES8/ES9 syntax and features, this article provides examples and explanations to help you ace your interview."
 githubPath: "https://github.com/Vasu7389/JavaScript-Interview-Questions"
 ---
 
@@ -14,7 +14,7 @@ Additionally, we'll include multiple choice questions (MCQs) on ES6 and explore 
 
 Whether you're preparing for a job interview or simply want to brush up on your knowledge of the language, this article has something for you.
 
-## Javascript ES6 ES7 ES8
+## Javascript Coding Interview Questions ES6 ES7 ES8
 
 ECMAScript (ES) is a standardized version of JavaScript, a programming language that is widely used to create interactive web pages and applications. ECMAScript is a formal specification developed and maintained by the Ecma International organization.
 
@@ -523,6 +523,8 @@ null === undefined is false because `null` and `undefined` are two distinct type
 null == undefined is true because `==` is the loose equality operator in JavaScript, which performs type coercion before comparison. In this case, both null and undefined are coerced to undefined before comparison, and since they both have the same value, the comparison returns true. However, it is generally recommended to use `===` instead of `==` to avoid unexpected behavior due to type coercion.
 
 </details>
+
+## Javascript Programming Questions
 
 <details>
 <summary>
