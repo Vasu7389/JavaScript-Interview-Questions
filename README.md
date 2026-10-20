@@ -1605,3 +1605,50 @@ function findEvenNumbersRecursive(numberArray) {
 ```
 
 </details>
+
+<details>
+<summary>
+<h3>48. When should you use <code>Promise.all()</code> versus <code>Promise.allSettled()</code> when loading data for a dashboard?</h3> <span class="level-tag level-2">Intermediate <span style='font-size:15px;'>&#128641;</span></span>
+
+Write a function that loads a profile, notifications, and recommendations. The dashboard should still display whichever requests succeed if one request fails.
+
+</summary>
+
+**Answer:**
+
+Use `Promise.all()` when every result is required. It rejects as soon as one promise rejects, which is useful when a partial result would make the page invalid.
+
+Use `Promise.allSettled()` when each request is independent and the UI can gracefully show partial data. It waits for every promise and reports whether each one was fulfilled or rejected.
+
+```js
+const getJson = async (url) => {
+  const response = await fetch(url);
+  if (!response.ok) throw new Error(`${url} returned ${response.status}`);
+  return response.json();
+};
+
+async function loadDashboard() {
+  const results = await Promise.allSettled([
+    getJson("/api/profile"),
+    getJson("/api/notifications"),
+    getJson("/api/recommendations"),
+  ]);
+
+  const [profile, notifications, recommendations] = results;
+
+  return {
+    profile: profile.status === "fulfilled" ? profile.value : null,
+    notifications:
+      notifications.status === "fulfilled" ? notifications.value : [],
+    recommendations:
+      recommendations.status === "fulfilled" ? recommendations.value : [],
+    errors: results
+      .filter((result) => result.status === "rejected")
+      .map((result) => result.reason.message),
+  };
+}
+```
+
+The important interview point is the failure strategy: `Promise.all()` is fail-fast; `Promise.allSettled()` enables a resilient, partial-success UI.
+
+</details>
