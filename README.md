@@ -4,7 +4,7 @@ description: "Prepare for your next 2025 Javascript Coding Interview Questions w
 githubPath: "https://github.com/Vasu7389/JavaScript-Interview-Questions"
 ---
 
-<span style=" font-size: 1rem; border-bottom: 1px solid grey;"> Updated Jan 11, 2025 </span>
+<span style=" font-size: 1rem; border-bottom: 1px solid grey;"> Updated Oct 20, 2026 </span>
 
 In this article, we will cover a range of JavaScript interview questions, including those related to the latest versions of the language (ES6, ES7, ES8, and ES9).
 
